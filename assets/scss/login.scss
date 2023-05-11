@@ -1,0 +1,208 @@
+@import "https://fonts.googleapis.com/icon?family=Material+Icons+Outlined";
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;700;800&display=swap');
+@import 'bootstrap/bootstrap.scss';
+
+body{
+	font-size: 16px;
+	line-height: 1.8;
+	font-weight: normal;
+	background: #f8f8f8;
+	color: lighten($black,50%);
+	font-family: 'Archivo', sans-serif;
+	font-weight: 400;
+	height: 100vh;
+}
+a {
+	transition: .3s all ease;
+	color: $primary;
+	&:hover, &:focus {
+		outline: none !important;
+		box-shadow: none;
+		color: $success;
+	}
+}
+h1, h2, h3, h4, h5,
+.h1, .h2, .h3, .h4, .h5 {
+	line-height: 1.2;
+	font-weight: 700;
+	color: $black;
+	span{
+		text-decoration: underline;
+		text-decoration-color: $success;
+	}
+}
+
+.bg-primary{
+	background: $primary !important;
+}
+
+.login-wrap{
+	position: relative;
+	z-index: 2;
+	background: radial-gradient(97.57% 210.75% at 0.9% 2.98%, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+	backdrop-filter: blur(21px);
+	border-radius: 15px;
+	border: 0.5px solid #eee;
+	h1{
+		font-weight: 800;
+	}
+	.icon{
+		width: 80px;
+		height: 80px;
+		background: $primary;
+		border-radius: 50%;
+		font-size: 30px;
+		margin: 0 auto;
+		margin-bottom: 10px;
+		span{
+			color: $white;
+		}
+	}
+}
+.form-img{
+	position: absolute;
+	z-index: 1;
+	bottom: -55px;
+	left: 11%;
+	width: 140px;
+	height: 125px;
+	transform: rotate(5deg);
+}
+
+// Form label
+.form-label{
+	font-weight: 700;
+	color: #1d1d1b;
+}
+//FORM CONTROL
+.form-control {
+	height: 45px;
+	background: $white;
+	color: $black;
+	font-size: 16px;
+	border-radius: 5px;
+	box-shadow: none;
+	//margin: 10px 0;
+	border: 1px solid rgba(0,0,0,.1);
+	border-radius: 10px;
+	&:focus, &:active {
+		outline: none !important;
+		box-shadow: none;
+		border: 1px solid $primary;
+	}
+	&:focus{box-shadow: 2px 2px 3px $primary}
+}
+textarea.form-control {
+	height: inherit!important;
+}
+
+.bx-shadow{box-shadow: 0px 0 16px 4px rgba(0, 0, 0, 0.25);}
+
+.mb-30px{margin-bottom: 30px}
+
+//CHECKBOX STYLE
+.checkbox-wrap {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-wrap input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "\f0c8";
+  font-family: "FontAwesome";
+  position: absolute;
+  color:rgba(0,0,0,.1);
+  font-size: 20px;
+  margin-top: -4px;
+  @include transition(.3s);
+}
+
+/* Show the checkmark when checked */
+.checkbox-wrap{
+	input:checked ~ .checkmark:after {
+	  display: block;
+	  content: "\f14a";
+	  font-family: "FontAwesome";
+	  color: rgba(0,0,0,.2);
+	}
+}
+
+/* Style the checkmark/indicator */
+.checkbox-wrap .checkmark:after {
+}
+
+
+.checkbox-primary{
+  color: $primary;
+  input:checked ~ .checkmark:after {
+	  color: $primary;
+	}
+}
+
+
+//BUTTON
+.btn {
+	cursor: pointer;
+	box-shadow: none!important;
+	font-size: 15px;
+	&:hover, &:active, &:focus {
+		outline: none;
+	}
+	&.btn-primary {
+		background: $primary;
+		border: 1px solid $primary;
+		color: $white;
+		border-radius: 100px;
+		font-weight: 700;
+		&:hover {
+			border: 1px solid $success;
+			background: $success;
+			color: #fff;
+		}
+		&.btn-outline-primary {
+			border: 1px solid $primary;
+			background: transparent;
+			color :$primary;
+			&:hover {
+				border: 1px solid transparent;
+				background: $primary;
+				color :$white;
+			}
+		}
+	}
+}
+.logo-home{
+	max-width: 200px;
+	bottom: 10%;
+	left: 10%;
+}
+
+@media(min-width: 1199px){
+	.lg-h-100{height: 100%!important}
+}
